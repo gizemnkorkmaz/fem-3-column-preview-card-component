@@ -1,0 +1,84 @@
+$bg-bright-orange: hsl(31, 77%, 52%);
+$bg-dark-cyan: hsl(184, 100%, 22%);
+$bg-darker-cyan: hsl(179, 100%, 13%);
+
+$paragraphs: hsla(0, 0%, 100%, 0.75);
+$headings: hsl(0, 0%, 95%);
+
+$font-size: 15px;
+
+$paragraph-font: "Lexend Deca", sans-serif;
+$heading-font: "Big Shoulders Display", cursive;
+
+main {
+  display: flex;
+  justify-content: center;
+
+  .card {
+    width: 300px;
+    margin: 90px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq("tablet", min) {
+      flex-direction: row;
+      width: 810px;
+    }
+    &__single {
+      padding: 50px;
+      @include mq("tablet", min) {
+        padding: 30px;
+      }
+      .header {
+        font-family: $heading-font;
+        color: $headings;
+        font-size: 30px;
+        font-weight: lighter;
+      }
+      .description {
+        font-family: $paragraph-font;
+        font-size: $font-size;
+        color: $paragraphs;
+        line-height: 25px;
+        font-weight: lighter;
+      }
+      .btn {
+        font-family: $paragraph-font;
+        font-size: $font-size;
+        color: $paragraphs;
+        background-color: $headings !important;
+        width: 140px;
+        height: 40px;
+        border-radius: 30px !important;
+        border: none;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        @include mq("tablet", min) {
+          margin-top: 60px;
+        }
+      }
+    }
+    #sedan {
+      background-color: $bg-bright-orange;
+      color: $bg-bright-orange;
+      border-radius: 10px 10px 0 0;
+      @include mq("tablet", min) {
+        border-radius: 10px 0 0 10px;
+      }
+    }
+    #suv {
+      background-color: $bg-dark-cyan;
+      color: $bg-dark-cyan;
+    }
+    #luxury {
+      background-color: $bg-darker-cyan;
+      color: $bg-dark-cyan;
+      border-radius: 0 0 10px 10px;
+      @include mq("tablet", min) {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+}

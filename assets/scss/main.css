@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main .card {
+  width: 300px;
+  margin: 90px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 850px) {
+  main .card {
+    flex-direction: row;
+    width: 810px;
+  }
+}
+main .card__single {
+  padding: 50px;
+}
+@media only screen and (min-width: 850px) {
+  main .card__single {
+    padding: 30px;
+  }
+}
+main .card__single .header {
+  font-family: "Big Shoulders Display", cursive;
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: lighter;
+}
+main .card__single .description {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 25px;
+  font-weight: lighter;
+}
+main .card__single .btn {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #f2f2f2 !important;
+  width: 140px;
+  height: 40px;
+  border-radius: 30px !important;
+  border: none;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+@media only screen and (min-width: 850px) {
+  main .card__single .btn {
+    margin-top: 60px;
+  }
+}
+main .card #sedan {
+  background-color: #e38826;
+  color: #e38826;
+  border-radius: 10px 10px 0 0;
+}
+@media only screen and (min-width: 850px) {
+  main .card #sedan {
+    border-radius: 10px 0 0 10px;
+  }
+}
+main .card #suv {
+  background-color: #006970;
+  color: #006970;
+}
+main .card #luxury {
+  background-color: #004241;
+  color: #006970;
+  border-radius: 0 0 10px 10px;
+}
+@media only screen and (min-width: 850px) {
+  main .card #luxury {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
